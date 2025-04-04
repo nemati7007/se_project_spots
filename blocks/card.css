@@ -1,0 +1,33 @@
+.card {
+  max-width: 413px;
+}
+
+.card__content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card__image {
+  display: block;
+  width: 413px;
+  height: 413px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 12px 0 0;
+}
+
+.card__like-btn {
+  background-image: url(../images/Like\ Icon.svg);
+  background-color: inherit;
+  cursor: pointer;
+  border: 0;
+  width: 23px;
+  height: 20px;
+}
