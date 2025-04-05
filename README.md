@@ -20,4 +20,4 @@ This project is an interactive image sharing web application that allows users t
 
 ## Video
 
-[A video description](../A%20video%20description.mov)
+[A video description](https://drive.google.com/file/d/1QnyYpvUaRscmtKLI5PFzfJ3b4xJrSN8U/view?usp=drive_link)
