@@ -1,7 +1,3 @@
-.card {
-  max-width: 413px;
-}
-
 .card__content {
   display: flex;
   align-items: flex-end;
@@ -10,17 +6,21 @@
 
 .card__image {
   display: block;
-  width: 413px;
+  width: 100%;
   height: 413px;
   border-radius: 10px;
   object-fit: cover;
 }
 
 .card__title {
+  color: #212121;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   margin: 12px 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card__like-btn {
@@ -28,6 +28,22 @@
   background-color: inherit;
   cursor: pointer;
   border: 0;
+  opacity: 0.4;
   width: 23px;
   height: 20px;
+}
+
+.card__like-btn:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 656px) {
+  .card__image {
+    height: 288px;
+  }
+
+  .card__title {
+    font-size: 16px;
+    line-height: 1;
+  }
 }
