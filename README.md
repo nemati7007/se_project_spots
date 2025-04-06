@@ -12,6 +12,10 @@ This project is an interactive image sharing web application that allows users t
 - CSS
 - Responsive Design
 
+## Deployment
+
+- Deployment link: https://nemati7007.github.io/se_project_spots/
+
 ## Images
 
 [A desktop version](./images-demo/desktop-viewscreenshot.jpg)

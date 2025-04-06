@@ -12,6 +12,8 @@
 .profile__avatar {
   height: 190px;
   width: 190px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 8px;
   margin-right: 10px;
 }
@@ -47,18 +49,28 @@
 .profile__edit-btn {
   background: inherit;
   border: 0;
+  color: #212121;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
   margin-top: auto;
   opacity: 0.7;
   text-align: left;
   padding: 0;
+  transition: opacity 0.5s;
 }
 
 .profile__edit-btn:hover {
   opacity: 1;
 }
 
-.profile__pencil-icon {
+.profile__edit-btn::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/pencil.svg) no-repeat center/cover;
   margin-right: 8px;
   vertical-align: middle;
 }
@@ -67,21 +79,28 @@
   background: #212121;
   border: 0;
   border-radius: 8px;
-  color: #fff;
+  color: #fcf5e5;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
   height: 100%;
   margin-top: auto;
   margin-left: auto;
   padding: 18px 32px;
+  transition: opacity 1s;
 }
 
 .profile__add-btn:hover {
   opacity: 0.8;
 }
 
-.profile__plus-icon {
+.profile__add-btn::before {
+  content: "";
+  display: inline-block;
   width: 12px;
   height: 12px;
+  background: url(../images/plus.svg) no-repeat center/cover;
   margin-right: 8px;
 }
 
