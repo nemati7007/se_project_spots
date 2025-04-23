@@ -26,7 +26,7 @@
 
 .card__like-btn {
   background-image: url(../images/like-icon.svg);
-  background-color: inherit;
+  background-color: #fcf5e5;
   cursor: pointer;
   border: 0;
   opacity: 0.4;
