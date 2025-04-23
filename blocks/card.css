@@ -26,6 +26,9 @@
 
 .card__like-btn {
   background-image: url(../images/like-icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: #fcf5e5;
   cursor: pointer;
   border: 0;
