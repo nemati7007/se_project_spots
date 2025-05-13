@@ -84,7 +84,6 @@ function getCardElement(data) {
 
   cardDeleteBtn.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImage.src = data.link;
@@ -143,6 +142,8 @@ function handleNewPostFormSubmit(evt) {
   cardsList.prepend(cardElement);
 
   closeModal(newPostModal);
+
+  evt.target.reset();
 }
 
 newPostFormEl.addEventListener("submit", handleNewPostFormSubmit);
