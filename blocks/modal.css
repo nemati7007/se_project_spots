@@ -177,6 +177,10 @@
 
   .modal__caption {
     font-size: 16px;
+    max-width: 270px;
+    /* I added the max-width for the caption because when the caption is long the
+     layout breaks(image is not centered, moves all the way to the left). You can check that with the 5th image
+     that has long caption */
   }
 
   .modal__image {
