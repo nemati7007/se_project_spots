@@ -129,6 +129,14 @@
   color: #2121214d;
 }
 
+.modal__input-error {
+  display: block;
+  color: #ff0000;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 0%;
+}
+
 .modal__save-btn {
   background-color: #212121;
   border: 0;
