@@ -131,10 +131,14 @@
 
 .modal__input-error {
   display: block;
-  color: #ff0000;
+  color: #ff0000b2;
   font-size: 16px;
   line-height: 110%;
   letter-spacing: 0%;
+}
+
+.modal__input_type_error {
+  border: 1px solid #ff000099;
 }
 
 .modal__save-btn {
@@ -151,6 +155,10 @@
 
 .modal__save-btn:hover {
   opacity: 0.8;
+}
+
+.modal__save-btn_inactive {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 768px) {
