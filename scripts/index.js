@@ -29,6 +29,8 @@ const initialCards = [
   },
 ];
 
+const modals = document.querySelectorAll(".modal");
+
 const editProfileButton = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -65,6 +67,14 @@ previewCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
+});
+
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitle = cardElement.querySelector(".card__title");
@@ -94,21 +104,31 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal.modal_is-opened");
+    if (openModal) closeModal(openModal);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-  resetValidation(editProfileModal, [
-    editProfileNameInput,
-    editProfileDescriptionInput,
-  ]);
+  resetValidation(
+    editProfileModal,
+    [editProfileNameInput, editProfileDescriptionInput],
+    settings
+  );
   openModal(editProfileModal);
 });
 
@@ -117,7 +137,11 @@ editProfileCloseBtn.addEventListener("click", () => {
 });
 
 newPostButton.addEventListener("click", () => {
-  resetValidation(newPostModal, [newPostLinkInput, newPostCaptionInput]);
+  resetValidation(
+    newPostModal,
+    [newPostLinkInput, newPostCaptionInput],
+    settings
+  );
   openModal(newPostModal);
 });
 
@@ -150,7 +174,7 @@ function handleNewPostFormSubmit(evt) {
   closeModal(newPostModal);
 
   evt.target.reset();
-  disableBtn(newPostSaveButton);
+  disableBtn(newPostSaveButton, settings);
 }
 
 newPostFormEl.addEventListener("submit", handleNewPostFormSubmit);
