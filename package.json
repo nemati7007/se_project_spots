@@ -1,0 +1,62 @@
+{
+  "name": "se_project_spots",
+  "version": "0.1.0",
+  "description": "An interactive social media web application where users can upload and remove photos, like photos from other users, and make minor profile adjustments. Engage, share, and connect with a seamless and user-friendly experience.",
+  "keywords": [
+    "social",
+    "media",
+    "photo",
+    "sharing",
+    "user",
+    "profiles",
+    "like",
+    "photos",
+    "interactive",
+    "web",
+    "app",
+    "social",
+    "networking",
+    "image",
+    "upload",
+    "online",
+    "community",
+    "profile",
+    "customization",
+    "digital",
+    "sharing"
+  ],
+  "homepage": "https://github.com/nemati7007/se_project_spots#readme",
+  "bugs": {
+    "url": "https://github.com/nemati7007/se_project_spots/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemati7007/se_project_spots.git"
+  },
+  "type": "module",
+  "main": "index.js",
+  "author": "Nematullo Kamoliddinov",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development"
+  },
+  "devDependencies": {
+    "@babel/core": "7.18.9",
+    "@babel/preset-env": "7.18.9",
+    "autoprefixer": "10.4.7",
+    "babel-loader": "8.2.5",
+    "clean-webpack-plugin": "4.0.0",
+    "css-loader": "6.7.1",
+    "cssnano": "5.1.12",
+    "html-webpack-plugin": "5.5.0",
+    "mini-css-extract-plugin": "2.6.1",
+    "postcss-loader": "7.0.1",
+    "webpack": "5.76.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.9.3"
+  },
+  "dependencies": {
+    "core-js": "3.23.5"
+  }
+}
