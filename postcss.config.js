@@ -1,7 +1,9 @@
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
 
-export const plugins = [
-  autoprefixer,
-  cssnano({ preset: "default" }), // set default minification settings
-];
+export default {
+  plugins: [
+    autoprefixer,
+    cssnano({ preset: "default" }), // set default minification settings
+  ],
+};
