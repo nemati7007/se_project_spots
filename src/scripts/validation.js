@@ -37,7 +37,7 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const disableBtn = (btnElement, config) => {
+export const disableBtn = (btnElement, config) => {
   btnElement.disabled = true;
   btnElement.classList.add(config.inactiveBtnClass);
 };
